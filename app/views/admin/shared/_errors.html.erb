@@ -1,0 +1,7 @@
+<% if @resource.present? && @resource.errors[:base].any? %>
+  <ul class="active_admin_base_error_message">
+    <% @resource.errors.full_messages_for(:base).each do |msg|%>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>

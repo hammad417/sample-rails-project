@@ -1,0 +1,24 @@
+require: rubocop-rails
+
+#https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Documentation
+Style/Documentation:
+  Enabled: false
+Naming/VariableNumber:
+ Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Rails/FilePath:
+  Enabled: false
+Rails/Output:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - config/environments/development.rb
+    - bin/bundle
+    - config/initializers/devise.rb
+    - db/schema.rb
+    - db/migrate/*
+    - config/environments/*
+    - lib/tasks/auto_annotate_models.rake
+    - app/admin/*

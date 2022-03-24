@@ -1,0 +1,13 @@
+schedule:
+  sftp_document_worker:
+    cron: "0 */5 * * * *" # Run job after every 5 minutes
+    class: SftpDocumentWorker
+    queue: default
+  delete_file_server_temp_documents:
+    cron: "0 1 * * * *" # Run job after every 1 hour
+    class: DeleteFileServerTempDocuments
+    queue: default
+  sftp_unmatched_documents_worker:
+    cron: "0 */10 * * * *" # Run job after every 10 minutes
+    class: SftpUnmatchedDocumentsWorker
+    queue: default

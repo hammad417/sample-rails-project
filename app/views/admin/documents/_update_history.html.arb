@@ -1,0 +1,14 @@
+panel "Update history" do
+  table_for resource.versions.where.not(whodunnit: nil).unscope(:order).order(created_at: :desc) do
+    column :user do |v|
+      v.whodunnit
+    end
+    column :changes do |v|
+      object_changes_trim_signature_fields(v.object_changes)
+    end
+
+    column :time do |v|
+      v.created_at
+    end
+  end
+end

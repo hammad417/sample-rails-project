@@ -1,0 +1,17 @@
+<% name = input + "_radio" %>
+<% target_file_field_id = "document_#{input}" %>
+<% target_base64_field_id = "document_#{input}_base64" %>
+
+<div class="signature_fields_wrapper">
+  <label>
+    <%= radio_button_tag name, "file", false, data: {"show-target-id": target_file_field_id, "hide-target-id": target_base64_field_id} %>
+    Choose File
+  </label>
+
+  <label class="label2">
+    <%= radio_button_tag name, "text", false, data: {"show-target-id": target_base64_field_id, "hide-target-id": target_file_field_id} %>
+    Choose Text
+  </label>
+</div>
+
+

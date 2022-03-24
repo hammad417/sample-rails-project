@@ -1,0 +1,108 @@
+// Sass variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "~@activeadmin/activeadmin/src/scss/mixins";
+@import "~@activeadmin/activeadmin/src/scss/base";
+
+// Overriding any non-variable Sass must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
+
+.active_admin_base_error_message{
+  margin: 20px;
+  font-size: 14px;
+  list-style: disc;
+  color: red;
+
+  li{
+    margin-bottom: 2px;
+  }
+}
+
+.base64_raw_input{
+  margin-left: 20%;
+  margin-top: 10px;
+}
+
+.base64_file_input{
+  padding-top: 30px;
+}
+
+.d-none{
+  display: none;
+}
+
+ .signature_fields_wrapper{
+   margin-left: 20%;
+   position: relative;
+
+   label{
+     position: absolute;
+     bottom: -30px;
+   }
+
+   .label2{
+     left: 120px
+   }
+ }
+
+
+#header{
+  background-color: rgb(174,0,24);
+  background-image: linear-gradient(to right, rgb(255,23,19) , rgb(240,124,0));
+  border-bottom: unset;
+  box-shadow: unset;
+  text-shadow: unset;
+  color: white;
+  font-size: 12px;
+}
+
+#header h1 img {
+  height: 21px;
+}
+
+#header a, #header a:link {
+  color: white;
+}
+
+#header ul.tabs > li.current > a,
+#header ul.tabs > li:hover > a {
+  background: #ffffff;
+  color: #000;
+}
+
+#header #utility_nav a:hover{
+  color: #000000;
+}
+
+#title_bar {
+  background-color: rgb(202, 0, 39);
+  background-image: linear-gradient(to right, rgb(255,23,19) , rgb(240,124,0));;
+  text-shadow: unset;
+
+  h2{
+    color: #ffffff;
+  }
+
+}
+
+.breadcrumb a, .breadcrumb a:link, .breadcrumb a:visited, .breadcrumb a:active{
+  color: #ffffff;
+}
+
+td.col.col-changes {
+  overflow-wrap: break-word;
+  max-width: 550px;
+}
+
+.other_document_type{
+  margin-left: 20%;
+}
